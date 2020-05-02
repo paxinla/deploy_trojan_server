@@ -22,6 +22,11 @@ then
     exit 1
 fi
 
+if [ "${TROJAN_PASSWORD}" = 'nopass' ];
+then
+    TROJAN_PASSWORD="$(</dev/urandom tr -dc A-Za-z0-9 | head -c${1:-32})"
+fi
+
 # Install neccessary tools
 ilogger "msg" "Install neccessary tools."
 install_packages "${CONFDIR}/pre_requirements.lst"

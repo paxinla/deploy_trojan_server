@@ -1,7 +1,9 @@
+.PHONY: install
+
 INSTALLER = "run.sh"
 IP = 
-PASSWORD = 
-
+PASSWORD = "nopass"
 
 install:
-	@$(INSTALLER) ${IP} ${PASSWORD}
+	find . -type f -name "*.sh" -exec chmod +x
+	@$(INSTALLER) $(IP) $(PASSWORD)

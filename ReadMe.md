@@ -5,7 +5,7 @@
 
 ----------
 
-This is a set of bash scripts for installing Trojan server on a Ubuntu server with Docker. It generates necessary self-signed certificate files. No domain name required.
+This is a set of bash scripts for installing [Trojan](https://github.com/trojan-gfw/trojan) server on a Ubuntu server with Docker. It generates necessary self-signed certificate files. No domain name required.
 
 ## Requirements
 
@@ -17,7 +17,7 @@ This is a set of bash scripts for installing Trojan server on a Ubuntu server wi
 On the server side, Execute command in this directory :
 
 ```sh
-$ make IP=your-server-public-ip PASSWORD=your-trojan-connect-password
+$ make install IP=your-server-public-ip PASSWORD=your-trojan-connect-password
 ```
 
 After finishing the installation, you should copy the files, config.client.json and ca-cert.pem, under directory tmp, to your trojan client directory. And rename config.client.json to config.json .
